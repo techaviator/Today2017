@@ -1,0 +1,137 @@
+
+//tagname[@attributename='atrributevalue']
+
+tagname[attributename = 'attributevalue']
+tagname[attributename = 'attributevalue'][attributename1 = 'attributevalue1']
+
+^ -starts-with
+$- ends-with
+*- contains
+tagname[attributename ^= 'attributevalue']
+tagname[attributename $= 'attributevalue']
+tagname[attributename *= 'attributevalue']
+
+Forward Traversing
+
+tagname[attributename = 'attributevalue']>tagname1
+tagname[attributename = 'attributevalue'] tagname1
+
+<html>
+ <input id= "123">
+	<span>
+		<a>Gmail<a>
+	</span>
+	
+ </input>
+</html>
+
+input[id='123']>span>a -- Gmail
+input[id='123'] span a-- Gmail
+
+
+input[id='123']>a
+input[id='123'] a
+
+
+***************************************
+
+
+<html>
+ <input id= "123">
+	<span>
+		<a>Gmail<a>
+		<a>Images<a>
+	</span>
+	
+ </input>
+</html>
+
+xpath - //input[@id='123']/span/a[2]
+cssSelector - input[id='123']>span>a:nth-child(2)
+tagname[attributename='attributevalue']>attributename1>attributename2:nth-child(index)
+
+
+
+<html>
+ <input id= "123">
+	<span>
+		<a id="G">Gmail<a>
+		<a class = "I">Images<a>
+	</span>
+	
+ </input>
+</html>
+
+xpath Gmail - //a[@id='G']
+cssSelector - #G or a#G
+
+xpath Images - //a[@class='I']
+cssSelectory -  .I or a.I
+
+
+
+
+
+<html>
+ <input id= "123">
+	<span>
+		<a>Gmail<a>
+		<a>Images<a>
+	</span>
+	
+ </input>
+</html>
+
+css gmail- input#123>span>a
+css Images - input#123>span>a:nth-child(2)
+
+
+
+
+
+<input class="textbox" maxlength="9" name="uamount" size="8" type="text">
+
+		table[class='commontable']>tbody>tr:nth-child(3)>td>p>input
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
